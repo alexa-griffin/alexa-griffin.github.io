@@ -30,21 +30,20 @@ section {
     position: relative; }
   .hero h1, .hero h3, .hero h4 {
     overflow: hidden;
+    white-space: nowrap;
     opacity: 0; }
   .hero h1 {
     font-size: 9rem;
-    animation: fade-down 1s ease-in-out forwards; }
+    animation: fade-width 1s ease-in-out forwards; }
   .hero h3 {
     font-size: 7rem;
-    animation: fade-down 1s ease-in-out forwards 1s; }
+    animation: fade-width 1s ease-in-out forwards 1s; }
   .hero h4 {
     font-size: 2rem;
-    animation: fade-down 0.5s ease-in-out forwards 2s; }
+    animation: fade-width 0.5s ease-in-out forwards 2s; }
   .hero nav {
-    margin-top: 1rem;
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem; }
+    position: absolute;
+    bottom: 1rem; }
     .hero nav a {
       display: inline-block;
       margin: 8px;
@@ -90,7 +89,7 @@ section {
     box-shadow: 0 8px 64px -4px rgba(0, 0, 0, 0.3);
     margin: 16px 0;
     position: relative;
-    animation: fade-down 1s ease-in-out forwards;
+    animation: fade 1s ease-in-out forwards;
     opacity: 0; }
     .code .code-block:nth-child(1) {
       left: 10%;
@@ -105,11 +104,19 @@ section {
       z-index: 2;
       animation-delay: 2.8s; }
 
-@keyframes fade-down {
+@keyframes fade {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes fade-width {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 100%; } }
 
 .token {
   color: #b7c5d3; }

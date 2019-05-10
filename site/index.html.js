@@ -13,7 +13,7 @@
     <div className="txt">
       <h1>Hi</h1>
       <h3>I'm Alexa</h3>
-      <h4>I make pretty things with code</h4>
+      <h4>I make pretty & functional things with code</h4>
     </div>
     <nav>
       <a href="#">about me</a>
