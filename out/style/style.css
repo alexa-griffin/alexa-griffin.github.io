@@ -9,4 +9,43 @@ body {
   font-family: "Open Sans", sans-serif; }
 
 a {
-  color: inherit; }
+  color: inherit;
+  text-decoration: none; }
+
+section {
+  height: 100vh;
+  width: 100%;
+  padding: 1rem 5%; }
+
+.hero {
+  background-color: #202124;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .hero h1 {
+    font-size: 10rem; }
+  .hero h3 {
+    font-size: 7rem; }
+  .hero h4 {
+    font-size: 3rem; }
+  .hero nav {
+    margin-top: 1rem; }
+    .hero nav a {
+      display: inline-block;
+      margin: 8px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      background-color: #dbb2ff;
+      color: rgba(0, 0, 0, 0.9);
+      border-radius: 500px;
+      font-size: 1.1rem; }
+      .hero nav a:first-child {
+        margin-left: 0; }
+
+.about header {
+  height: 56px;
+  width: 100%; }
+  .about header h4 {
+    width: 100%;
+    text-align: center; }
