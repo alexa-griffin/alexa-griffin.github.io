@@ -1,8 +1,12 @@
-body {
-  background-color: #000; }
-
 * {
   margin: 0;
   padding: 0;
   border: none;
+  outline: none;
   box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  color: inherit; }
