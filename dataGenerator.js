@@ -1,4 +1,7 @@
+const fs = require("fs")
 
+
+fs.writeFileSync("./data.js", `
 module.exports = {
   name: "hello",
   testPages: [
@@ -16,3 +19,4 @@ module.exports = {
     },
   ]
 }
+`)
