@@ -12,14 +12,14 @@
   <section className="hero">
     <div className="txt">
       <h1>Hi</h1>
-      <h3>I'm Alexa,</h3>
+      <h3>I'm Alexa</h3>
       <h4>I make pretty things with code</h4>
-        <nav>
-          <a href="#">about me</a>
-          <a href="#">my projects</a>
-          <a href="#">get in touch</a>
-        </nav>
     </div>
+    <nav>
+      <a href="#">about me</a>
+      <a href="#">my projects</a>
+      <a href="#">get in touch</a>
+    </nav>
     <div className="code">
       <div className="code-block">
         <pre>
@@ -74,7 +74,6 @@ siteData.forEach((data) => {
       </div>
     </div>
   </section>
-  <div style={{ height: "2000px" }}></div>
   <script src="assets/prism.js"></script>
   <script src="assets/main.js"></script>
 </body>
