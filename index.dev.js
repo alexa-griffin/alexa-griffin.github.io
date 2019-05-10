@@ -11,6 +11,9 @@ const ReactDOMServer = require('react-dom/server')
 // servers
 const static = require('node-static')
 
+const markupData = require("./data.js")
+console.log(markupData)
+
 // "compile"
 chokidar.watch("./site/", {}).on("all", (ev, path) => {
   console.log(ev, path)
@@ -34,10 +37,9 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
           } else {
             markup = data
           }
-          console.log(meta)
           try {
             fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", "").replace(".js", ""), "<!DOCTYPE html>" + 
-              ReactDOMServer.renderToString(eval(babel.transform(markup, {
+              ReactDOMServer.renderToString(eval(babel.transform("(" + markup + ")(markupData)", {
                 plugins: ["@babel/plugin-transform-react-jsx"]
               }).code)), () => { })
           } catch (error) {
