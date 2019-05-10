@@ -12,6 +12,9 @@ a {
   color: inherit;
   text-decoration: none; }
 
+::selection {
+  background-color: #dbb2ff; }
+
 section {
   height: 100vh;
   width: 100%;
@@ -52,20 +55,21 @@ section {
       color: rgba(255, 255, 255, 0.9);
       border-radius: 500px;
       font-size: 1.1rem;
-      position: relative; }
+      position: relative;
+      z-index: 1; }
       .hero nav a:hover::after {
         height: 90%; }
       .hero nav a::after {
         content: "";
         display: block;
         transition: 0.2s all ease-in-out;
-        background-color: rgba(219, 178, 255, 0.5);
+        background-color: rgba(219, 178, 255, 0.3);
         position: absolute;
         width: 100%;
         height: 30%;
         bottom: 0;
         left: 0;
-        z-index: -1; }
+        z-index: 0; }
       .hero nav a:first-child {
         margin-left: 0; }
 
