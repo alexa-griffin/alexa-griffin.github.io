@@ -1,0 +1,23 @@
+$main: #b7c5d3
+$keyword: #70e1e8
+$variable: #718ca1
+$value: #e27e8d
+
+.token
+  color: $main
+  &.keyword, &.function
+    color: $keyword
+  &.variable
+    color: $variable
+  &.number, &.string
+    color: $value
+
+.language-sass
+  .token
+    color: $value
+    &.selector
+      color: $keyword
+    &.property, &.punctuation
+      color: $main
+    &.variable
+      color: $variable

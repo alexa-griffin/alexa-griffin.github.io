@@ -10,15 +10,72 @@
 </head>
 <body>
   <section className="hero">
-    <h1>Hi</h1>
-    <h3>I'm Alexa,</h3>
-    <h4>I make pretty things</h4>
-    <nav>
-      <a href="#">about me</a>
-      <a href="#">my projects</a>
-      <a href="#">get in touch</a>
-    </nav>
+    <div className="txt">
+      <h1>Hi</h1>
+      <h3>I'm Alexa,</h3>
+      <h4>I make pretty things</h4>
+        <nav>
+          <a href="#">about me</a>
+          <a href="#">my projects</a>
+          <a href="#">get in touch</a>
+        </nav>
+    </div>
+    <div className="code">
+      <div className="code-block">
+        <pre>
+          <code className="language-cpp">
+{`
+float localOffX, localOffY;
+
+if(dA != 0) {
+  localOffX = 2 * sin(dA / 2) * ((dS / dA) + sR);
+  localOffY = 2 * sin(dA / 2) * ((dM / dA) + sM);
+} else {
+  localOffX = dS;
+  localOffY = dM;
+}
+
+`}      
+          </code>
+        </pre>
+      </div>
+      <div className="code-block">
+        <pre>
+          <code className="language-javascript">
+{`
+siteData.forEach((data) => {
+  try {
+    fs.writeFile("./out/" + data.outFileName, "<!DOCTYPE html>" +
+      ReactDOMServer.renderToString(eval(babel.transform("(" + markup + ")(markupData, data)", {
+        plugins: ["@babel/plugin-transform-react-jsx"]
+      }).code)), () => {})
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+`}
+        </code></pre>
+      </div>
+      <div className="code-block">
+        <pre>
+          <code className="language-sass">
+{`
+.card, .img
+  box-shadow: 0 8px 24px 8px rgba($main, 0.15)
+  border-radius: 8px
+  position: absolute
+  width: $width * 0.8
+  height: $height * 0.8
+
+`}
+          </code>
+        </pre>
+      </div>
+    </div>
   </section>
+
+  <script src="assets/prism.js"></script>
 </body>
 </html>
 )
