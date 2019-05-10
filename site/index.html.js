@@ -76,6 +76,7 @@ siteData.forEach((data) => {
   </section>
 
   <script src="assets/prism.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
 )
