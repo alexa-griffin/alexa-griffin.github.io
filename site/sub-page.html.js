@@ -1,3 +1,13 @@
+%--META--%
+{
+  "genForEach": {
+    "file": "sub/%FILE%.html",
+    "objKey": "testPages"
+  },
+  "heck": "heck"
+}
+%--META--%
+
 (markupData, pageData) => (
   <html lang="en">
   <head>
@@ -7,9 +17,7 @@
     <title>{ markupData.name }</title>
   </head>
   <body>
-    {
-      markupData.testPages.map(l => <a href={"sub/" + l.fileName + ".html"}>l.fileName</a>)
-    }
+    <h1>{ pageData.content }</h1>
   </body>
   </html>
 )

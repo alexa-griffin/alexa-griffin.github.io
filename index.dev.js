@@ -12,7 +12,7 @@ const ReactDOMServer = require('react-dom/server')
 const static = require('node-static')
 
 const markupData = require("./data.js")
-console.log(markupData)
+
 
 // "compile"
 chokidar.watch("./site/", {}).on("all", (ev, path) => {
@@ -37,14 +37,26 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
           } else {
             markup = data
           }
-          try {
-            fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", "").replace(".js", ""), "<!DOCTYPE html>" + 
-              ReactDOMServer.renderToString(eval(babel.transform("(" + markup + ")(markupData)", {
-                plugins: ["@babel/plugin-transform-react-jsx"]
-              }).code)), () => { })
-          } catch (error) {
-            console.log(error)
+          let siteData = [{
+            outFileName: path.replace("\\", "/").replace("site/", "").replace(".js", "")
+          }] // empty object to make it run once
+
+          if (meta.genForEach) {
+            markupData[meta.genForEach.objKey].forEach((objData, i) => {
+              siteData[i] = objData
+              siteData[i].outFileName = meta.genForEach.file.replace("%FILE%", objData.fileName)
+            })
           }
+          siteData.forEach((data) => {
+            try {
+              fs.writeFile("./out/" + data.outFileName, "<!DOCTYPE html>" +
+                ReactDOMServer.renderToString(eval(babel.transform("(" + markup + ")(markupData, data)", {
+                  plugins: ["@babel/plugin-transform-react-jsx"]
+                }).code)), () => { })
+            } catch (error) {
+              console.log(error)
+            }
+          })
         } else console.log(err)
       })
     }
