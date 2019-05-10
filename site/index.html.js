@@ -1,3 +1,10 @@
+%--META--%
+{
+  "hello": "world",
+  "heck": "heck"
+}
+%--META--%
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,6 +13,6 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>heck</h1>
 </body>
 </html>

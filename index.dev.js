@@ -8,6 +8,10 @@ const sass = require('node-sass')
 const React = require('react')
 const ReactDOMServer = require('react-dom/server')
 
+// servers
+const static = require('node-static')
+
+// "compile"
 chokidar.watch("./site/", {}).on("all", (ev, path) => {
   console.log(ev, path)
   setTimeout(_ => { // hack to make node-sass work with vscode
@@ -22,9 +26,18 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
     } else if(path.indexOf(".html.js") !== -1) {
       fs.readFile(path, "utf8", (err, data) => {
         if(!err) {
+          let markup
+          let meta = {}
+          if (data.indexOf("%--META--%") === 0) {
+            meta = JSON.parse(data.substring(10, data.lastIndexOf("%--META--%")))
+            markup = data.substring(data.lastIndexOf("%--META--%") + 10)
+          } else {
+            markup = data
+          }
+          console.log(meta)
           try {
-            fs.writeFile("./out/test.html", "<!DOCTYPE html>" + 
-              ReactDOMServer.renderToString(eval(babel.transform(data, {
+            fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", "").replace(".js", ""), "<!DOCTYPE html>" + 
+              ReactDOMServer.renderToString(eval(babel.transform(markup, {
                 plugins: ["@babel/plugin-transform-react-jsx"]
               }).code)), () => { })
           } catch (error) {
@@ -35,3 +48,13 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
     }
   }, 500)
 })
+
+// serve
+
+const server = new static.Server('./out')
+
+require('http').createServer(function (request, response) {
+  request.addListener('end', function () {
+    server.serve(request, response);
+  }).resume();
+}).listen(8080)
