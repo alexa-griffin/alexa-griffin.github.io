@@ -139,3 +139,13 @@ section {
     color: #b7c5d3; }
   .language-sass .token.variable {
     color: #718ca1; }
+
+.about .col {
+  width: 60%;
+  height: 100%;
+  float: right; }
+  .about .col h1 {
+    font-size: 3rem; }
+
+.about canvas {
+  position: absolute; }

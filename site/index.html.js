@@ -27,10 +27,13 @@
 {`
 float localOffX, localOffY;
 
-if(dA != 0) {
+if(dA != 0) 
+{
   localOffX = 2 * sin(dA / 2) * ((dS / dA) + sR);
   localOffY = 2 * sin(dA / 2) * ((dM / dA) + sM);
-} else {
+} 
+else 
+{
   localOffX = dS;
   localOffY = dM;
 }
@@ -43,14 +46,12 @@ if(dA != 0) {
         <pre>
           <code className="language-javascript">
 {`
-siteData.forEach((data) => {
-  try {
-    fs.writeFile("./out/" + data.outFileName, "<!DOCTYPE html>" +
-      ReactDOMServer.renderToString(eval(babel.transform("(" + markup + ")(markupData, data)", {
-        plugins: ["@babel/plugin-transform-react-jsx"]
-      }).code)), () => {})
-  } catch (error) {
-    console.log(error)
+window.addEventListener("mousemove", e => {
+  for(let i = 0; i < codeBlocks.length; i++) {
+    codeBlocks[i].style.transform = \`translate(
+      \${(e.clientX - window.innerWidth / 2) * scalars[i].x}px, 
+      \${(e.clientY - window.innerHeight / 2) * scalars[i].y}px)
+    \`
   }
 })
 
@@ -74,8 +75,26 @@ siteData.forEach((data) => {
       </div>
     </div>
   </section>
+  <section className="about">
+    <canvas id="c"></canvas>
+    <div className="col">
+      <h1>About me</h1>
+      <p>
+        I am a programmer, game maker, UI & UX designer, amateur mathematician, 
+        web developer, open source idealist, and robotics enthusiast. Officially 
+        I do front end webapp development however, I prefer to think of my work 
+        as a constant stream of learning opportunities. I love what 
+        I do and try to learn from everything my work is no exception.
+      </p>
+      <p>
+        Other than content creation, programming, and being a student, 
+        I enjoy coffee, tea, sleep when I can get it, and cats.
+      </p>
+    </div>
+  </section>
   <script src="assets/prism.js"></script>
   <script src="assets/main.js"></script>
+  <script src="assets/canvas.js"></script>
 </body>
 </html>
 )
