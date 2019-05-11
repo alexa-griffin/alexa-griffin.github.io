@@ -50,7 +50,7 @@ section {
     .hero nav a {
       display: inline-block;
       margin: 8px;
-      padding: 0 0.2rem;
+      padding: 0.2rem;
       text-align: center;
       color: rgba(255, 255, 255, 0.9);
       border-radius: 500px;
@@ -140,12 +140,21 @@ section {
   .language-sass .token.variable {
     color: #718ca1; }
 
-.about .col {
-  width: 60%;
-  height: 100%;
-  float: right; }
-  .about .col h1 {
-    font-size: 3rem; }
-
-.about canvas {
-  position: absolute; }
+.about {
+  position: relative; }
+  .about .col {
+    width: 60%;
+    height: 100%;
+    float: right;
+    position: relative;
+    z-index: 1; }
+    .about .col h1 {
+      font-size: 3rem; }
+    .about .col p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      line-height: 2.6rem; }
+  .about canvas {
+    position: absolute;
+    height: 100vh;
+    top: 0; }
