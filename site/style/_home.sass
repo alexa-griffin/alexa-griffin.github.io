@@ -19,16 +19,33 @@ section
   h1, h3, h4
     overflow: hidden
     white-space: nowrap
-    opacity: 0
+    position: relative
+    display: table
+    color: rgba($light-text, 0)
+    &::after
+      content: ""
+      background-color: #fff
+      display: block
+      height: 100%
+      width: 0
+      position: absolute
+      top: 0
+  $timing: 0.8s
   h1
     font-size: 9rem
-    animation: fade-width 1s ease-in-out forwards
+    animation: slide-in $timing ease-in-out forwards
+    &::after
+      animation: slide-in-after $timing ease-in-out forwards
   h3
     font-size: 7rem
-    animation: fade-width 1s ease-in-out forwards 1s
+    animation: slide-in $timing ease-in-out forwards $timing / 3
+    &::after
+      animation: slide-in-after $timing ease-in-out forwards $timing / 3
   h4
     font-size: 2rem
-    animation: fade-width 0.5s ease-in-out forwards 2s
+    animation: slide-in $timing ease-in-out forwards $timing * (2 / 3)
+    &::after
+      animation: slide-in-after $timing ease-in-out forwards $timing * (2 / 3)
   nav
     position: absolute
     bottom: 1rem
@@ -85,15 +102,15 @@ section
     &:nth-child(1)
       left: 10%
       z-index: 0
-      animation-delay: 2.4s
+      animation-delay: 1.1s
     &:nth-child(2)
       right: 10%
       z-index: 1
-      animation-delay: 2.2s
+      animation-delay: 1s
     &:nth-child(3)
       left: 0
       z-index: 2
-      animation-delay: 2.8s
+      animation-delay: 1.3s
 
 @keyframes fade
   0%
@@ -101,10 +118,23 @@ section
   100%
     opacity: 1
 
-@keyframes fade-width
+@keyframes slide-in
   0%
-    opacity: 0
-    width: 0
+    color: rgba($light-text, 0)
+  49% 
+    color: rgba($light-text, 0)
+  50%
+    color: rgba($light-text, 1)
   100%
-    opacity: 1
+    color: rgba($light-text, 1)
+
+@keyframes slide-in-after
+  0%
+    width: 0
+    left: 0
+  50%
     width: 100%
+    right: 0
+  100%
+    width: 0
+    right: 0
