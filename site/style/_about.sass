@@ -9,12 +9,19 @@
     float: right
     position: relative
     z-index: 1
+    display: flex
+    justify-content: center
+    flex-direction: column
     h1
       font-size: 3rem
     p
       margin-top: 0.5rem
       font-size: 1.1rem
       line-height: 2.6rem
+    .about-txt
+      opacity: 0
+      &.fade-in
+        opacity: 1
   canvas
     position: absolute
     height: 100vh
