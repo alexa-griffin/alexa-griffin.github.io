@@ -215,3 +215,60 @@ section {
     position: absolute;
     height: 100vh;
     top: 0; }
+
+.projects {
+  background-color: #202124;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  height: auto; }
+  .projects > h1 {
+    font-size: 4rem;
+    text-align: center; }
+  .projects .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .projects a {
+    display: block;
+    margin: 32px;
+    flex: calc(50% - 32px * 2);
+    position: relative; }
+    .projects a .card {
+      background-color: #2c2d32;
+      box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      position: relative;
+      transition: 0.2s all ease-in-out;
+      overflow: hidden; }
+    .projects a h1 {
+      font-size: 3rem; }
+    .projects a .num {
+      top: -3rem;
+      left: -1.5rem;
+      font-size: 4rem;
+      position: absolute;
+      font-family: "Source Code Pro", monospace;
+      color: #dbb2ff;
+      transition: 0.2s all ease-in-out;
+      z-index: 1; }
+    .projects a .thumb {
+      opacity: 0.6;
+      position: absolute;
+      left: 70%;
+      top: 0;
+      transition: all ease-in-out 0.3s;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .projects a .desc {
+      font-size: 1.1rem;
+      line-height: 2rem;
+      max-width: 60%; }
+    .projects a:hover .card {
+      transform: scale(1.02); }
+    .projects a:hover .num {
+      transform: scale(1.5); }
+    .projects a:hover .thumb {
+      opacity: 1; }
