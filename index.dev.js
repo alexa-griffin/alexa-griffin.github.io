@@ -31,9 +31,9 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
         if(!err) {
           let markup
           let meta = {}
-          if (data.indexOf("%--META--%") === 0) {
-            meta = JSON.parse(data.substring(10, data.lastIndexOf("%--META--%")))
-            markup = data.substring(data.lastIndexOf("%--META--%") + 10)
+          if (data.indexOf("/*%--META--%") === 0) {
+            meta = JSON.parse(data.substring(12, data.lastIndexOf("%--META--%*/")))
+            markup = data.substring(data.lastIndexOf("%--META--%*/") + 12)
           } else {
             markup = data
           }

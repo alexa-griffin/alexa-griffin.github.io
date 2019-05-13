@@ -97,7 +97,7 @@ window.addEventListener("mousemove", e => {
     <div className="cards">
       {
         markupData.projects.map((project, i) => (
-          <a href="#">
+          <a href={ "./projects/" + project.fileName }>
             <p className="num">{ i + 1 }</p>
             <div className="card">
               <h1>{ project.title }</h1>

@@ -1,40 +1,26 @@
 module.exports = {
-  name: "hello",
+  name: "Alexa Griffin",
   projects: [
     {
-      fileName: "omnisnote",
+      fileName: "omnisnote.html",
       title: "Omnisnote",
-      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      shortDesc: "This is an on/off project that I am creating that is my perfect markdown editor. Because several friends and I are unsatisfied with all products we were able to find, I decided to make my own.",
       tech: [ "react", "firebase" ],
       thumb: "./assets/omnisnote-thumb.png"
     },
     {
-      fileName: "omnisnote",
-      title: "Omnisnote",
-      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
-      tech: [ "react", "firebase" ],
-      thumb: "./assets/omnisnote-thumb.png"
+      fileName: "wiki-redesign.html",
+      title: "Wikipedia Redesign",
+      shortDesc: "",
+      tech: [ "react", "APIs" ],
+      thumb: "./assets/wiki-thumb.png"
     },
     {
-      fileName: "omnisnote",
-      title: "Omnisnote",
-      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
-      tech: [ "react", "firebase" ],
-      thumb: "./assets/omnisnote-thumb.png"
+      fileName: "personal-website.html",
+      title: "Personal Website",
+      shortDesc: "After years of not doing anything for my online presence, I decdied it would be good for me to create some kind of website, portfolio, and resume.",
+      tech: [ "react", "SASS", "node.js" ],
+      thumb: "./assets/personal-thumb.png"
     },
-    {
-      fileName: "omnisnote",
-      title: "Omnisnote",
-      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
-      tech: [ "react", "firebase" ],
-      thumb: "./assets/omnisnote-thumb.png"
-    },
-    {
-      fileName: "omnisnote",
-      title: "Omnisnote",
-      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
-      tech: [ "react", "firebase" ],
-      thumb: "./assets/omnisnote-thumb.png"
-    }
   ]
 }
