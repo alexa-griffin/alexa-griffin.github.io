@@ -92,6 +92,23 @@ window.addEventListener("mousemove", e => {
       </p>
     </div>
   </section>
+  <section className="projects">
+    <h1>Projects</h1>
+    <div className="cards">
+      {
+        markupData.projects.map((project, i) => (
+          <a href="#">
+            <p className="num">{ i + 1 }</p>
+            <div className="card">
+              <h1>{ project.title }</h1>
+              <p className="desc">{ project.shortDesc }</p>
+              <div style={{ backgroundImage: `url(${project.thumb})` }} className="thumb"></div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
   <script src="assets/prism.js"></script>
   <script src="assets/main.js"></script>
   <script src="assets/canvas.js"></script>

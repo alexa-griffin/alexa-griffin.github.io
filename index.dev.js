@@ -60,11 +60,15 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
         } else console.log(err)
       })
     } else if(path.indexOf("assets") !== -1) {
-      fs.readFile(path, "utf8", (err, data) => {
-        if(!err) {
-          fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", ""), babel.transform(data).code, _ => {})
-        } else console.log(err)
-      })
+      if(path.indexOf(".js") !== -1) {
+        fs.readFile(path, "utf8", (err, data) => {
+          if(!err) {
+            fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", ""), babel.transform(data).code, _ => {})
+          } else console.log(err)
+        })
+      } else {
+        fs.copyFile(path, "./out/" + path.replace("\\", "/").replace("site/", ""), () => {})
+      }
     }
   }, 500)
 })

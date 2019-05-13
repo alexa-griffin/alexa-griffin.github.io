@@ -1,18 +1,40 @@
-
 module.exports = {
   name: "hello",
-  testPages: [
+  projects: [
     {
-      fileName: "page1",
-      content: "page 1 content"
+      fileName: "omnisnote",
+      title: "Omnisnote",
+      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      tech: [ "react", "firebase" ],
+      thumb: "./assets/omnisnote-thumb.png"
     },
     {
-      fileName: "page2",
-      content: "page 2 content"
+      fileName: "omnisnote",
+      title: "Omnisnote",
+      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      tech: [ "react", "firebase" ],
+      thumb: "./assets/omnisnote-thumb.png"
     },
     {
-      fileName: "page3",
-      content: "page 3 content"
+      fileName: "omnisnote",
+      title: "Omnisnote",
+      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      tech: [ "react", "firebase" ],
+      thumb: "./assets/omnisnote-thumb.png"
     },
+    {
+      fileName: "omnisnote",
+      title: "Omnisnote",
+      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      tech: [ "react", "firebase" ],
+      thumb: "./assets/omnisnote-thumb.png"
+    },
+    {
+      fileName: "omnisnote",
+      title: "Omnisnote",
+      shortDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo cumque sunt beatae nisi alias ad quasi. Doloribus, tempora harum.",
+      tech: [ "react", "firebase" ],
+      thumb: "./assets/omnisnote-thumb.png"
+    }
   ]
 }
