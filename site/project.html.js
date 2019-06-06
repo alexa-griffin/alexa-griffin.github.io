@@ -28,7 +28,7 @@
   <section className="project">
     <h1>{ pageData.title }</h1>
     <p>{ pageData.shortDesc }</p>
-    <a href={ pageData.link }>find it live here!</a>
+    { pageData.link && <a href={ pageData.link }>find it live here!</a> }
     { pageData.sections.map(section => (<div>
       { section.title && <h2>{ section.title }</h2> }
       { section.p && <p>{ section.p }</p> }

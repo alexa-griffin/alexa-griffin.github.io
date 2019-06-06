@@ -31,7 +31,23 @@ module.exports = {
       title: "Personal Website",
       shortDesc: "After years of not doing anything for my online presence, I decdied it would be good for me to create some kind of website, portfolio, and resume.",
       tech: [ "react", "SASS", "node.js", "babel", "" ],
-      thumb: "./assets/personal-thumb.png"
+      thumb: "./assets/personal-thumb.png",
+      sections: [
+        {
+          title: "Goals",
+          p: `This website is my face on the internet. It should showcase the very best of my work and serve as a
+          way for people to find me. I wanted it to show all the things I love about front end web development`,
+        },
+        {
+          title: "Design",
+          p: `I love weird little interactions on websites. So I wanted to incorperate several of these into my site without it feeling overwhelming.
+          I also wanted the first thing everyone sees to be a big flashy animation, followed by a little demo of a micro-interaction. This lead to the floating codeblocks 
+          concept which I originally intended to be easily editable, however when this was implemented I found it somewhat tacky. So I went with a simple paralax effect instead.
+          Next was the about section. This section has always bored me to death. So I kept it as brief as possible while still incorporating my ethos. Then because that seemed too heavy 
+          I also added a blithe comment about how little sleep I get. The animation I am exteremely happy with. My start in javascript was little canvas expirements so it felt only fitting to 
+          pay homage to that origin.`
+        }
+      ]
     },
     // {
     //   fileName: "wiki-redesign.html",
