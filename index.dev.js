@@ -11,8 +11,13 @@ const ReactDOMServer = require('react-dom/server')
 // servers
 const static = require('node-static')
 
-const markupData = require("./data.js")
+let markupData = require("./data.js")
 
+fs.watch("./data.js", (ev, f) => {
+  console.log("changed data.js")
+  delete require.cache[require.resolve('./data.js')]
+  markupData = require("./data.js")
+})
 
 // "compile"
 chokidar.watch("./site/", {}).on("all", (ev, path) => {

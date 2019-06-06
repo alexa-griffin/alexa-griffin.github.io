@@ -292,7 +292,8 @@ section.project {
   max-width: 920px;
   margin: 0 auto; }
   section.project h1 {
-    font-size: 72px; }
+    font-size: 4rem;
+    margin-bottom: 1.5rem; }
   section.project p {
     font-size: 1.1rem;
     line-height: 2rem; }

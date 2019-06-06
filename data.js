@@ -6,7 +6,21 @@ module.exports = {
       title: "Omnisnote",
       shortDesc: "This is an on/off project that I am creating that is my perfect markdown editor. Because several friends and I are unsatisfied with all products we were able to find, I decided to make my own.",
       tech: [ "react", "firebase", "emotion" ],
-      thumb: "./assets/omnisnote-thumb.png"
+      thumb: "./assets/omnisnote-thumb.png",
+      sections: [
+        {
+          title: "Goals of this project",
+          p: `My primary goal of this project was to create a service. Before doing this
+          project I knew all the theory about creating an application however I did not know 
+          many of the intricacies of building out a real application with actual users.
+          Because I made this while in school my time was limited, and while this is still very 
+          much an ongoing project it has taught me a lot about creating a production ready application.`
+        },
+        {
+          title: "Design",
+          p: ""
+        }
+      ]
     },
     {
       fileName: "personal-website.html",

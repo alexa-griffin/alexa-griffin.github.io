@@ -28,6 +28,10 @@
   <section className="project">
     <h1>{ pageData.title }</h1>
     <p>{ pageData.shortDesc }</p>
+    { pageData.sections.map(section => (<div>
+      { section.title && <h2>{ section.title }</h2> }
+      { section.p && <p>{ section.p }</p> }
+    </div>)) }
   </section>
 </body>
 </html>
