@@ -272,3 +272,27 @@ section {
       transform: scale(1.5); }
     .projects a:hover .thumb {
       opacity: 1; }
+
+header {
+  position: fixed;
+  height: 56px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header nav a {
+    margin: 0 18px; }
+
+section.project {
+  padding-top: 72px;
+  max-width: 920px;
+  margin: 0 auto; }
+  section.project h1 {
+    font-size: 72px; }
+  section.project p {
+    font-size: 1.1rem;
+    line-height: 2rem; }
