@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style/style.css"/>
   <title>{ markupData.name }</title>
 </head>
-<body>
+<body className="home">
   <section className="hero">
     <div className="txt">
       <h1>Hi</h1>
@@ -107,6 +107,7 @@ window.addEventListener("mousemove", e => {
           </a>
         ))
       }
+      <p>More coming soon</p>
     </div>
   </section>
   <script src="assets/prism.js"></script>

@@ -7,6 +7,7 @@ module.exports = {
       shortDesc: "This is an on/off project that I am creating that is my perfect markdown editor. Because several friends and I are unsatisfied with all products we were able to find, I decided to make my own.",
       tech: [ "react", "firebase", "emotion" ],
       thumb: "./assets/omnisnote-thumb.png",
+      link: "",
       sections: [
         {
           title: "Goals of this project",
@@ -17,9 +18,12 @@ module.exports = {
           much an ongoing project it has taught me a lot about creating a production ready application.`
         },
         {
-          title: "Design",
-          p: ""
-        }
+          title: "Functionality",
+          p: `Much of this is still a work in progress however I still believe it is worthwhile to go into the original
+          features intended for this project. This was primarily made for students, thus organization was key. In order to facilitate this
+          folders, tags, and search functionality should all be very tightly interwoven. Accessibility was also a major consideration. Almost all aspects of text can be changed to improve readability.
+          In addition to this one of the people who I know will be using this application cannot read dark text on a light background. Therefore themes were a consideration from day one.`
+        },
       ]
     },
     {
