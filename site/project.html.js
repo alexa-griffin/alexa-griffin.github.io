@@ -14,11 +14,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Source+Code+Pro:600" rel="stylesheet" />
-  <link rel="stylesheet" href="style/style.css"/>
+  <link rel="stylesheet" href="../style/style.css"/>
   <title>{ "Case study - " + pageData.title }</title>
 </head>
 <body>
-
+  <header>
+    <nav>
+      <a href="/index.html">about me</a>
+      <a href="#">my projects</a>
+      <a href="#">get in touch</a>
+    </nav>
+  </header>
+  <section className="project">
+    <h1>{ pageData.title }</h1>
+    <p>{ pageData.shortDesc }</p>
+  </section>
 </body>
 </html>
 )

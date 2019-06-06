@@ -63,7 +63,11 @@ chokidar.watch("./site/", {}).on("all", (ev, path) => {
       if(path.indexOf(".js") !== -1) {
         fs.readFile(path, "utf8", (err, data) => {
           if(!err) {
-            fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", ""), babel.transform(data).code, _ => {})
+            fs.writeFile("./out/" + path.replace("\\", "/").replace("site/", ""), babel.transform(data, {
+              minified: true,
+              comments: false,
+              presets: ["@babel/preset-env"]
+            }).code, _ => {})
           } else console.log(err)
         })
       } else {
