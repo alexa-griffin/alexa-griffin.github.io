@@ -39,11 +39,19 @@
   h3
     font-size: 7rem
     animation: slide-in $timing ease-in-out forwards $timing / 3
+    +max-size(570px)
+      font-size: 4rem
     &::after
       animation: slide-in-after $timing ease-in-out forwards $timing / 3
   h4
     font-size: 2rem
     animation: slide-in $timing ease-in-out forwards $timing * (2 / 3)
+    +max-size(750px)
+      font-size: 1.5rem
+    +max-size(570px)
+      font-size: 1rem
+    +max-size(400px)
+      font-size: 0.8rem
     &::after
       animation: slide-in-after $timing ease-in-out forwards $timing * (2 / 3)
 nav
