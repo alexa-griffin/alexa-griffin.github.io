@@ -6,8 +6,9 @@
     const emailI = document.getElementById("email")
     const messageI = document.getElementById("message")
     const errOut = document.getElementById("err")
+    const form = document.getElementById("contact-form")
     const ERR = "you forgot to fill out one of the above fields"
-
+    const header = document.getElementById("header")
     document.getElementById("submit-btn").addEventListener("click", e => {
       e.preventDefault()
       errOut.innerText = ""
@@ -29,7 +30,12 @@
           from_name: nameI.value,
           from_email: emailI.value,
           message: messageI.value,
-        }).then(console.log).catch(console.log)  
+        }).then(() => {
+          header.innerText = "thanks for contacting me, I try to get back within a few days"
+          form.classList.add("fade")
+        }).catch(() => {
+          errOut.innerText = "I'm sorry something went wrong, could you please try again"
+        })  
       }
     })
   }

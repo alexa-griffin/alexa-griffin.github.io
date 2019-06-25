@@ -20,6 +20,13 @@
     flex-direction: column
     width: 95%
     max-width: 480px
+    transition: 0.3s all ease-in-out
+    position: relative
+    opacity: 1
+    bottom: 0
+    &.fade
+      opacity: 0
+      bottom: -100px
     input, textarea
       border: 1px solid $light-text
       color: $light-text

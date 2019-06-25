@@ -12,13 +12,13 @@
 </head>
 <body className="ctn-bty">
   <section className="contact">
-    <h1>Contact Me</h1>
+    <h1 id="header">Contact Me</h1>
     <form id="contact-form">
       <div className="sender">
         <input id="name" type="text" placeholder="what should I call you?"/>
         <input id="email" type="email" placeholder="what's your email?"/>
       </div>
-      <textarea id="message" placeholder="what would you like to say?"></textarea>
+      <textarea id="message" placeholder="what would you like to talk to me about?"></textarea>
       <input type="submit" id="submit-btn" value="submit" />
     </form>
     <p id="err"></p>

@@ -331,7 +331,14 @@ section.project {
     justify-content: center;
     flex-direction: column;
     width: 95%;
-    max-width: 480px; }
+    max-width: 480px;
+    transition: 0.3s all ease-in-out;
+    position: relative;
+    opacity: 1;
+    bottom: 0; }
+    .contact form.fade {
+      opacity: 0;
+      bottom: -100px; }
     .contact form input, .contact form textarea {
       border: 1px solid rgba(255, 255, 255, 0.9);
       color: rgba(255, 255, 255, 0.9);
