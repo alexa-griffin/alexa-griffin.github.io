@@ -46,9 +46,15 @@
     >div
       display: flex
       align-items: center
+      +max-size(400px)
+        flex-wrap: wrap
       width: 100%
       input
         width: 50%
+        +max-size(400px)
+          width: 100%
+          margin-left: 0 !important
+          margin-right: 0 !important
         &:last-child
           margin-left: 4px
         &:first-child
@@ -68,3 +74,9 @@
         animation-delay: 0.1s
       &:last-child
         animation-delay: 0.2s
+      &:last-child
+        margin-right: 0
+      +max-size(400px)
+        margin: 0 8px !important
+      +max-size(350px)
+        margin: 0 2px !important

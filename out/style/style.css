@@ -412,8 +412,16 @@ section.project {
       display: flex;
       align-items: center;
       width: 100%; }
+      @media (max-width: 400px) {
+        .contact form > div {
+          flex-wrap: wrap; } }
       .contact form > div input {
         width: 50%; }
+        @media (max-width: 400px) {
+          .contact form > div input {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important; } }
         .contact form > div input:last-child {
           margin-left: 4px; }
         .contact form > div input:first-child {
@@ -432,3 +440,11 @@ section.project {
       animation-delay: 0.1s; }
     .contact nav > a:last-child {
       animation-delay: 0.2s; }
+    .contact nav > a:last-child {
+      margin-right: 0; }
+    @media (max-width: 400px) {
+      .contact nav > a {
+        margin: 0 8px !important; } }
+    @media (max-width: 350px) {
+      .contact nav > a {
+        margin: 0 2px !important; } }
