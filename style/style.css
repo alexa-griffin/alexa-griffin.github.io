@@ -202,12 +202,21 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column; }
+    @media (max-width: 650px) {
+      .about .col {
+        width: 100%; } }
     .about .col h1 {
       font-size: 3rem; }
+      @media (max-width: 400px) {
+        .about .col h1 {
+          font-size: 2rem; } }
     .about .col p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
       line-height: 2.6rem; }
+      @media (max-width: 400px) {
+        .about .col p {
+          line-height: 1.8rem; } }
     .about .col .about-txt {
       opacity: 0; }
       .about .col .about-txt.fade-in {
@@ -215,7 +224,8 @@ nav {
   .about canvas {
     position: absolute;
     height: 100vh;
-    top: 0; }
+    top: 0;
+    opacity: 0.6; }
 
 .projects {
   background-color: #202124;
