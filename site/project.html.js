@@ -22,7 +22,7 @@
     <nav>
       <a href="/index.html#about">about me</a>
       <a href="/index.html#projects">my projects</a>
-      <a href="#">get in touch</a>
+      <a href="/contact.html">get in touch</a>
     </nav>
   </header>
   <section className="project">
