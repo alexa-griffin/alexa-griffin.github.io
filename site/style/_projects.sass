@@ -12,16 +12,19 @@
     align-items: center
     justify-content: center
     flex-wrap: wrap
-    >p
-      color: $light-text
-      opacity: 0.5
-      font-size: 2rem
+  >p
+    color: $light-text
+    text-align: center
+    opacity: 0.5
+    font-size: 2rem
+    width: 100%
   a
     $gap: 32px
     display: block
     margin: $gap
     flex: calc(50% - #{$gap} * 2)
     position: relative
+    max-width: 50%
     .card
       background-color: lighten($main-background, 5%)
       box-shadow: 0 8px 24px -8px rgba(#000, 0.2)

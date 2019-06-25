@@ -20,8 +20,8 @@
 <body>
   <header>
     <nav>
-      <a href="/index.html">about me</a>
-      <a href="#">my projects</a>
+      <a href="/index.html#about">about me</a>
+      <a href="/index.html#projects">my projects</a>
       <a href="#">get in touch</a>
     </nav>
   </header>

@@ -50,11 +50,16 @@ module.exports = {
       ]
     },
     // {
-    //   fileName: "wiki-redesign.html",
-    //   title: "Wikipedia Redesign",
-    //   shortDesc: "",
-    //   tech: [ "react", "APIs" ],
-    //   thumb: "./assets/wiki-thumb.png"
+    //   fileName: "desktop-tasks.html",
+    //   title: "Google Tasks Desktop",
+    //   shortDesc: "I love the Google Tasks phone application, but why doesn't it have a dedicated desktop application",
+    //   tech: [ "vue", "APIs" ],
+    //   thumb: "./assets/tasks-thumb.png",
+    //   sections: [
+    //     {
+    //       // TODO: import this
+    //     }
+    //   ]
     // },
   ]
 }

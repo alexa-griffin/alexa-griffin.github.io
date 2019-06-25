@@ -18,7 +18,7 @@
     <nav>
       <a href="#">about me</a>
       <a href="#">my projects</a>
-      <a href="#">get in touch</a>
+      <a href="contact.html">get in touch</a>
     </nav>
     <div className="code">
       <div className="code-block">
@@ -75,7 +75,7 @@ window.addEventListener("mousemove", e => {
       </div>
     </div>
   </section>
-  <section className="about">
+  <section className="about" id="about">
     <canvas id="c"></canvas>
     <div className="col">
       <h1>About me</h1>
@@ -92,7 +92,7 @@ window.addEventListener("mousemove", e => {
       </p>
     </div>
   </section>
-  <section className="projects">
+  <section className="projects" id="projects">
     <h1>Projects</h1>
     <div className="cards">
       {
@@ -107,8 +107,8 @@ window.addEventListener("mousemove", e => {
           </a>
         ))
       }
-      <p>More coming soon</p>
     </div>
+    <p>More coming soon</p>
   </section>
   <script src="assets/prism.js"></script>
   <script src="assets/main.js"></script>
