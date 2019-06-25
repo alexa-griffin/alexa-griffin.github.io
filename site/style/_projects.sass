@@ -25,6 +25,10 @@ section.projects
     flex: calc(50% - #{$gap} * 2)
     position: relative
     max-width: 50%
+    +max-size(1000px)
+      flex: initial
+      width: 100%
+      max-width: 100%
     .card
       background-color: lighten($main-background, 5%)
       box-shadow: 0 8px 24px -8px rgba(#000, 0.2)
@@ -32,8 +36,12 @@ section.projects
       position: relative
       transition: 0.2s all ease-in-out
       overflow: hidden
+      z-index: 1
     h1
       font-size: 3rem
+      +max-size(900px)
+        font-size: 2rem
+        margin-bottom: 8px
     .num
       top: -3rem
       left: -1.5rem
@@ -42,7 +50,7 @@ section.projects
       font-family: $monospace
       color: rgba($accent, 1)
       transition: 0.2s all ease-in-out
-      z-index: 1
+      z-index: 10
     .thumb
       opacity: 0.6
       position: absolute
@@ -53,10 +61,14 @@ section.projects
       width: 100%
       background-repeat: no-repeat
       background-size: cover
+      z-index: -1
     .desc
       font-size: 1.1rem
       line-height: 2rem
       max-width: 60%
+      +max-size(900px)
+        font-size: 1rem
+        line-height: 1.4rem
     &:hover
       .card
         transform: scale(1.02)

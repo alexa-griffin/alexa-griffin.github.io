@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../style/style.css"/>
   <title>{ "Case study - " + pageData.title }</title>
 </head>
-<body>
+<body className="project">
   <header>
     <nav>
       <a href="/index.html#about">about me</a>

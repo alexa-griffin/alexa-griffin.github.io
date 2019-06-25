@@ -1,10 +1,22 @@
+body.project nav a
+  color: $dark-text
+  animation: none
+  bottom: 0
+  opacity: 1
+  &:last-child
+    margin-right: 0
+  +max-size(430px)
+    margin: 0 8px !important
 section.project
   padding-top: 100px
   max-width: 920px
+  width: 95%
   margin: 0 auto 72px
   h1
     font-size: 4rem
     margin-bottom: 1.2rem
+    +max-size(400px)
+      font-size: 3rem
   p
     font-size: 1.1rem
     line-height: 2rem
