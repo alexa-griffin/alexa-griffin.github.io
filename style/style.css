@@ -62,42 +62,43 @@ a {
     animation: slide-in 0.8s ease-in-out forwards 0.53333s; }
     .hero h4::after {
       animation: slide-in-after 0.8s ease-in-out forwards 0.53333s; }
-  .hero nav {
-    position: absolute;
-    bottom: 1rem; }
-    .hero nav a {
-      display: inline-block;
-      margin: 8px;
-      padding: 0.2rem;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.9);
-      border-radius: 500px;
-      font-size: 1.1rem;
-      position: relative;
-      z-index: 1;
-      bottom: -10px;
-      opacity: 0;
-      animation: fade-up 0.3s ease-in-out forwards; }
-      .hero nav a:hover::after {
-        height: 90%; }
-      .hero nav a::after {
-        content: "";
-        display: block;
-        transition: 0.2s all ease-in-out;
-        background-color: rgba(219, 178, 255, 0.3);
-        position: absolute;
-        width: 100%;
-        height: 30%;
-        bottom: 0;
-        left: 0;
-        z-index: 0; }
-      .hero nav a:first-child {
-        margin-left: 0;
-        animation-delay: 1s; }
-      .hero nav a:nth-child(2) {
-        animation-delay: 1.1s; }
-      .hero nav a:nth-child(3) {
-        animation-delay: 1.2s; }
+
+nav {
+  position: absolute;
+  bottom: 1rem; }
+  nav a {
+    display: inline-block;
+    margin: 8px;
+    padding: 0.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 500px;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    bottom: -10px;
+    opacity: 0;
+    animation: fade-up 0.3s ease-in-out forwards; }
+    nav a:hover::after {
+      height: 90%; }
+    nav a::after {
+      content: "";
+      display: block;
+      transition: 0.2s all ease-in-out;
+      background-color: rgba(219, 178, 255, 0.3);
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      bottom: 0;
+      left: 0;
+      z-index: 0; }
+    nav a:first-child {
+      margin-left: 0;
+      animation-delay: 1s; }
+    nav a:nth-child(2) {
+      animation-delay: 1.1s; }
+    nav a:nth-child(3) {
+      animation-delay: 1.2s; }
 
 .code {
   position: absolute;
@@ -307,3 +308,67 @@ section.project {
     line-height: 2rem; }
   section.project div {
     margin-top: 2rem; }
+
+.ctn-bty {
+  padding: 1rem 5%;
+  height: 100vh;
+  width: 100%;
+  background-color: #202124; }
+
+.contact {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; }
+  .contact h1 {
+    margin-bottom: 16px; }
+  .contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    max-width: 480px; }
+    .contact form input, .contact form textarea {
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.9);
+      background-color: transparent;
+      font-family: "Open Sans", sans-serif;
+      padding: 8px;
+      transition: 0.2s all cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-bottom: 8px; }
+      .contact form input:focus:not([type="submit"]), .contact form textarea:focus:not([type="submit"]) {
+        border-bottom: 1px solid #dbb2ff; }
+      .contact form input.err, .contact form textarea.err {
+        border: 1px solid #E91E63; }
+      .contact form input[type="submit"], .contact form textarea[type="submit"] {
+        cursor: pointer; }
+        .contact form input[type="submit"]:hover, .contact form textarea[type="submit"]:hover {
+          background-color: rgba(219, 178, 255, 0.2); }
+    .contact form > div {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      .contact form > div input {
+        width: 50%; }
+        .contact form > div input:last-child {
+          margin-left: 4px; }
+        .contact form > div input:first-child {
+          margin-right: 4px; }
+    .contact form textarea {
+      width: 100%;
+      resize: vertical; }
+  .contact > * {
+    color: rgba(255, 255, 255, 0.9); }
+  .contact nav {
+    position: absolute;
+    left: 0; }
+    .contact nav > a:first-child {
+      animation-delay: 0s; }
+    .contact nav > a:nth-child(2) {
+      animation-delay: 0.1s; }
+    .contact nav > a:last-child {
+      animation-delay: 0.2s; }
