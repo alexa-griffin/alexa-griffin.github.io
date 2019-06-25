@@ -12,12 +12,18 @@
     display: flex
     justify-content: center
     flex-direction: column
+    +max-size(650px)
+      width: 100%
     h1
       font-size: 3rem
+      +max-size(400px)
+        font-size: 2rem
     p
       margin-top: 0.5rem
       font-size: 1.1rem
       line-height: 2.6rem
+      +max-size(400px)
+        line-height: 1.8rem
     .about-txt
       opacity: 0
       &.fade-in
@@ -26,3 +32,4 @@
     position: absolute
     height: 100vh
     top: 0
+    opacity: 0.6

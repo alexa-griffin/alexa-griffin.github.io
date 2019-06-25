@@ -3,7 +3,7 @@
   const c = canvas.getContext('2d')
   const PR = window.devicePixelRatio || 1
 
-  canvas.width = window.innerWidth * PR * 0.4
+  canvas.width = window.innerWidth * PR
   canvas.height = window.innerHeight * PR
   c.scale(PR, PR)
   c.globalAlpha = 0.2
