@@ -70,6 +70,10 @@ nav
     bottom: -10px
     opacity: 0
     animation: fade-up 0.3s ease-in-out forwards
+    +max-size(400px)
+      margin: 0 8px !important
+    +max-size(350px)
+      margin: 0 2px !important
     &:hover
       &::after
         height: 90%
@@ -103,6 +107,8 @@ nav
   justify-content: center
   flex-direction: column
   z-index: 0
+  +max-size(560px)
+    opacity: 0.9
   .code-block
     background-color: lighten($main-background, 5%)
     border-radius: 12px
@@ -132,7 +138,7 @@ nav
   0%
     opacity: 0
   100%
-    opacity: 1
+    opacity: 0.8
 
 @keyframes fade-up
   0%
