@@ -1,20 +1,25 @@
 {
+  "private": true,
   "name": "alexa-griffin.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "charge serve src",
-    "build": "charge build src target"
+    "build": "charge build src build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexa-griffin/alexa-griffin.github.io.git"
   },
-  "author": "",
   "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/alexa-griffin/alexa-griffin.github.io/issues"
   },
-  "homepage": "https://github.com/alexa-griffin/alexa-griffin.github.io#readme"
+  "homepage": "https://github.com/alexa-griffin/alexa-griffin.github.io#readme",
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/react": "^11.1.2",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@static/charge": "^1.7.0"
+  }
 }

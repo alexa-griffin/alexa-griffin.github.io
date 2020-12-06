@@ -1,14 +1,16 @@
-
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
+import Html from "./layout/html.html.jsx"
 
 export default ({ data, environment }) => (
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Document</title>
-        </head>
-        <body>
-
-        </body>
-    </html>
+    <Html title="Alexa Griffin">
+        <h1 css={css`
+            font-weight: normal;
+        `}>heck</h1>
+        <div css={css({
+            backgroundColor: "#f0f"
+        })}>
+            heck
+        </div>
+    </Html >
 )
