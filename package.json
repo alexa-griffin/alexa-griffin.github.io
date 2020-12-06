@@ -1,0 +1,20 @@
+{
+  "name": "alexa-griffin.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "charge serve src",
+    "build": "charge build src target"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexa-griffin/alexa-griffin.github.io.git"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/alexa-griffin/alexa-griffin.github.io/issues"
+  },
+  "homepage": "https://github.com/alexa-griffin/alexa-griffin.github.io#readme"
+}
