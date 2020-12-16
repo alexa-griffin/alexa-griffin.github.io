@@ -57,9 +57,9 @@ export default ({ data, env }) => (
     </h3>
     <P>
       I'm a software developer, currently interested in practical graphics
-      applications. A lot of my work is{' '}
-      <Link href="https://github.com/alexa-griffin">open source</Link>, and I
-      write about some of it on my <Link href="/blog">blog</Link>.
+      applications and user interaction with those applications. A lot of my
+      work is <Link href="https://github.com/alexa-griffin">open source</Link>,
+      and I write about some of it on my <Link href="/blog">blog</Link>.
     </P>
     <P>
       If you would like to get in touch, please email to contact @ this website.
