@@ -2,5 +2,7 @@
     "backgroundColor": "#ffffff",
     "textColor": "#121212",
     "font": "'lora', serif",
-    "selectionColor": "rgba(225, 202, 255, 0.4)"
+    "selectionColor": "rgba(225, 202, 255, 0.4)",
+    "maxWidth": "1280px",
+    "mainColor": "#e1caff"
 }
