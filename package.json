@@ -3,7 +3,7 @@
   "name": "alexa-griffin.github.io",
   "scripts": {
     "start": "charge serve src",
-    "build": "charge build src build"
+    "build": "charge build src docs"
   },
   "repository": {
     "type": "git",
